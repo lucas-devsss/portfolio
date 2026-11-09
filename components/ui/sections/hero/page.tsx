@@ -1,6 +1,8 @@
-import { Button } from "@base-ui/react";
-import { barlow, poppins500 } from "../../fonts";
+"use client";
+
 import { motion, Variants } from "motion/react";
+import { barlow } from "../../fonts";
+import SocialContainer from "./components/SocialContainer";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -12,7 +14,7 @@ const containerVariants: Variants = {
   },
 };
 
-const itemVariants: Variants = {
+export const itemVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 25,
@@ -34,46 +36,25 @@ export default function Hero() {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="min-h-dvh flex items-center flex-col leading-44 justify-center"
+      className="min-h-dvh flex items-center flex-col leading-44 justify-center px-2 gap-10"
     >
       <div>
         <motion.h1
           variants={itemVariants}
-          className={`${barlow.className} uppercase flex flex-col text-center`}
+          className={`${barlow.className} uppercase flex flex-col text-center gap-5`}
         >
-          <span className="text-[275px]">caio lucas</span>
-          <span className="text-[111px]">
-            desenvolvedor
-            <span className="ml-5 text-violet-600">front-end</span>
+          <span className="flex flex-col sm:flex-row items-center justify-center gap-x-[0.25em] text-[clamp(10rem,15vw,17.1875rem)] leading-[0.85]">
+            <span>Caio</span>
+            <span>Lucas</span>
+          </span>
+
+          <span className="flex flex-wrap justify-center items-center gap-x-[0.25em] text-[clamp(4rem,6.1vw,6.9375rem)] leading-[0.95] text-zinc-800">
+            <span>Desenvolvedor</span>
+            <span className="text-violet-600">Front-end</span>
           </span>
         </motion.h1>
       </div>
-      <div>
-        <a
-          href=""
-          className={`${poppins500.className} text-sm border-2 rounded-full py-3 px-4 border-zinc-200`}
-        >
-          Linkedin
-        </a>
-      </div>
-      {/* <div className="p-14">
-        <div>
-          <div>
-            <h2 className={`${poppins500.className}`}>
-              desenvolvedor front-end
-            </h2>
-            <p className={`${poppins300.className}`}>
-              Meu texto massa que eu ainda não decidi
-            </p>
-          </div>
-          <Button
-            className={`${poppins500.className} flex items-center justify-between mt-6 gap-1.5  rounded-full bg-black px-6 py-3.75 text-sm font-medium text-white shadow-[0_8px_20px_rgba(15,15,19,0.18)] hover:opacity-80 active:opacity-60 hover:-translate-y-1.5 active:translate-y-1.5 transition-all cursor-pointer duration-300`}
-          >
-            Vamos colaborar
-            <ArrowUpRight size={20} />
-          </Button>
-        </div>
-      </div> */}
+      <SocialContainer />
     </motion.section>
   );
 }
