@@ -1,8 +1,9 @@
-import { barlow, poppins300 } from "../../fonts";
+import { barlow, poppins300, poppins400, poppins500 } from "../../fonts";
+import SkillsList from "./components/SkillsList";
 
 export default function AboutMe() {
   return (
-    <section className="min-h-dvh grid md:grid-cols-[0.7fr_1fr] md:grid-rows-2 bg-[#0F0F13] items-center px-[clamp(2.5rem,10vw,10rem)] py-50">
+    <section className="min-h-dvh grid md:grid-cols-[0.7fr_1fr] md:grid-rows-2 bg-[#0F0F13] items-center px-[clamp(2.5rem,10vw,10rem)] py-30">
       <div className="row-span-2 md:self-start md:sticky top-0">
         <h2
           className={`${barlow.className} text-8xl uppercase text-white  md:text-9xl lg:text-[156px]`}
@@ -40,9 +41,9 @@ export default function AboutMe() {
       <div
         className={`text-zinc-200 ${poppins300.className} mt-10 md:mt-0 text-lg flex flex-col gap-5`}
       >
-        <h4 className="after:h-px after:content-[''] after:bg-zinc-700 text-zinc-500 text-sm uppercase after:flex-1 flex items-center gap-3">
+        <h3 className="after:h-px after:content-[''] after:bg-zinc-700 text-zinc-500 text-sm uppercase after:flex-1 flex items-center gap-3">
           Fora do código
-        </h4>
+        </h3>
         <p className="text-zinc-400">
           Mas, fora do código, também existe bastante coisa acontecendo! Adoro
           desenhar, acompanhar animes, jogar e ouvir músicas internacionais.
@@ -57,6 +58,14 @@ export default function AboutMe() {
           um novo interesse pelo caminho.
         </p>
       </div>
+      <section className="col-span-2 flex flex-col gap-8">
+        <h3
+          className={`${poppins500.className} after:h-px after:content-[''] after:bg-zinc-700 text-zinc-400 text-lg uppercase after:flex-1 flex items-center gap-3`}
+        >
+          skills
+        </h3>
+        <SkillsList />
+      </section>
     </section>
   );
 }
