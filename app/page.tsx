@@ -1,4 +1,5 @@
 import Header from "@/components/ui/header/Header";
+import AboutMe from "@/components/ui/sections/about/page";
 import Hero from "@/components/ui/sections/hero/page";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="min-h-dvh">
       <Header />
       <Hero />
+      <AboutMe />
     </main>
   );
 }
