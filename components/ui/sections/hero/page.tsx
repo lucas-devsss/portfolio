@@ -1,34 +1,9 @@
 "use client";
 
-import { motion, Variants } from "motion/react";
+import { motion } from "motion/react";
+import { containerVariants, itemVariants } from "../../animations/variants";
 import { barlow } from "../../fonts";
 import SocialContainer from "./components/SocialContainer";
-
-const containerVariants: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-      delayChildren: 0.3,
-    },
-  },
-};
-
-export const itemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 25,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 20,
-    },
-  },
-};
 
 export default function Hero() {
   return (

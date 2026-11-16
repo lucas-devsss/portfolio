@@ -5,7 +5,7 @@ import HamburguerMenu from "./components/HamburguerMenu";
 
 export default function Header() {
   return (
-    <header className="fixed flex lg:grid justify-between lg:grid-cols-3 items-center py-5 min-w-full px-10">
+    <header className="fixed flex lg:grid justify-between lg:grid-cols-3 items-center py-5 min-w-full px-10 border">
       <p className="justify-self-start">CA.</p>
       <div className="hidden lg:contents">
         <nav>

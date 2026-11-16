@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import SocialBadge from "./SocialBadge";
 import { motion } from "motion/react";
-import { itemVariants } from "../page";
+import { itemVariants } from "../../../animations/variants";
 
 export default function SocialContainer() {
   return (
