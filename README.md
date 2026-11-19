@@ -33,10 +33,10 @@ This is the portfolio I'm building to present my work as a frontend developer. I
 ## Planned Sections
 
 - [x] Hero
-- [ ] About me
-- [ ] Skills
-- [ ] Projects
+- [x] About me
+- [x] Skills
 - [ ] Experience
+- [ ] Projects
 - [ ] Contact
 - [ ] Services
 
